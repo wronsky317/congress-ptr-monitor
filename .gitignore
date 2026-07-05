@@ -1,0 +1,17 @@
+.DS_Store
+*.log
+__pycache__/
+*.py[cod]
+
+# Local runtime artifacts
+data/
+pdfs/
+reports/
+state/
+
+# Local-only planning/scratch files
+PLAN_*.md
+follow-me.png
+
+# Keep only temporary PDF downloads out even if pdfs/ is unignored later.
+pdfs/*.tmp
