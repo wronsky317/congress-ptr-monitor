@@ -81,6 +81,7 @@ Codex automation: `congress-ptr-source-monitor-to-feishu`
 - Writes JSON data to `data/`.
 - Writes a reviewable long-term candidate to
   `long_term_views/pending_updates/YYYY-MM-DD.md`.
+- Commits and pushes the generated pending update file when it changes.
 - Updates memory at `state/memory.md`.
 
 ## Long-Term View Integration
@@ -92,6 +93,10 @@ Use the long-term layer for repeated ticker/member signals, large/options
 activity, non-ticker macro assets, stale/anomalous disclosures, and invalidation
 conditions. Do not paste raw PDF text or overwrite the maintained signal map
 automatically.
+
+Daily runs commit only the generated `pending_updates/YYYY-MM-DD.md` file and
+push the current git branch. Runtime outputs under `data/`, `pdfs/`, `reports/`,
+and `state/` remain ignored.
 
 ## Current Source Coverage
 

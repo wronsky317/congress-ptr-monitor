@@ -33,4 +33,6 @@ Delivery requirement: write `reports/latest_report.md` and include the report in
 
 Long-term view requirement: write one reviewable pending update to `long_term_views/pending_updates/YYYY-MM-DD.md` after each daily run. Never overwrite `long_term_views/congress_ptr_signal_map.md` automatically; that file is for periodic manual integration after reviewing pending updates and official PDFs.
 
+Git requirement: after generating the pending update, commit and push only that pending update file when it changed. Do not stage runtime artifacts from `data/`, `pdfs/`, `reports/`, or `state/`.
+
 After every run, update `/Users/wronsky/Documents/codes/congress-ptr-monitor/state/memory.md` with: last run time Asia/Shanghai, official sources used, House PTR count, newest DocIDs processed, parsed transaction count, Senate status, delivery status, and next-run notes. Never stay silent; if no new PTRs, send a short no-new-disclosures report.

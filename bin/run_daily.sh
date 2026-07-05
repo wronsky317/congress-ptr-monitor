@@ -16,4 +16,9 @@ set -euo pipefail
   --report /Users/wronsky/Documents/codes/congress-ptr-monitor/reports/latest_report.md \
   --records /Users/wronsky/Documents/codes/congress-ptr-monitor/data/latest_records.json \
   --transactions /Users/wronsky/Documents/codes/congress-ptr-monitor/data/latest_transactions.json \
-  --output-dir /Users/wronsky/Documents/codes/congress-ptr-monitor/long_term_views/pending_updates
+  --output-dir /Users/wronsky/Documents/codes/congress-ptr-monitor/long_term_views/pending_updates \
+  | tee /tmp/congress_ptr_pending_update.out
+
+/Users/wronsky/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
+  /Users/wronsky/Documents/codes/congress-ptr-monitor/scripts/commit_pending_update.py \
+  --from-generator-output /tmp/congress_ptr_pending_update.out

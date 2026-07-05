@@ -22,6 +22,8 @@ You are running the Congress PTR source monitor.
 3. Generate the daily long-term signal candidate:
    - `long_term_views/pending_updates/YYYY-MM-DD.md`
    - Use `scripts/update_long_term_candidates.py`.
+   - Commit and push the generated pending update when it changes, staging only
+     that pending update file.
    - Do not automatically edit `long_term_views/congress_ptr_signal_map.md`;
      that file is for periodic manual integration.
 4. Inspect failures. If House source/network/PDF parsing fails, write a failure
@@ -41,3 +43,5 @@ You are running the Congress PTR source monitor.
 - Keep official DocID/PDF links in the report so users can audit every item.
 - Keep daily long-term candidates summarized and commit-safe. No raw PDF text,
   credentials, Feishu chat ids, or automatic thesis-map overwrites.
+- Do not stage runtime artifacts (`data/`, `pdfs/`, `reports/`, `state/`) in
+  daily git commits.
